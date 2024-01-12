@@ -3,7 +3,7 @@
   --modal-background-color: #03060d;
   --text-heading-color: #fffafb;
   --border-color: #403f3f;
-  --tab-color-default: #d1cccc;
+  --tab-color-default: #a6a3a3;
   --input-border-color: rgba(255, 250, 251, .1);
   --input-background-color: #0f1118;
 }
@@ -14,7 +14,6 @@
 }
 
 .modal-wrapper {
-  width: 100%;
   max-width: 53.75rem;
   margin-left: auto;
   margin-right: auto;
@@ -28,7 +27,6 @@
   background-color: var(--modal-background-color);
   border-radius: 48px;
   padding: 48px;
-  overflow: hidden;
 }
 
 .modal-header {
@@ -66,7 +64,7 @@
 
 .modal-tab_link.w--current {
   background-color: var(--modal-background-color);
-  color: var(--background-color);
+  color: var(--text-heading-color);
   border-bottom: 1.5px solid #f74749;
   font-weight: 500;
 }
@@ -123,6 +121,7 @@
   cursor: pointer;
   padding-top: 8px;
   padding-bottom: 8px;
+  font-weight: 500;
   position: relative;
 }
 
@@ -151,9 +150,22 @@
 .input {
   border: 1px solid var(--input-border-color);
   background-color: var(--input-background-color);
+  color: var(--text-heading-color);
   border-radius: 8px;
   margin-bottom: 0;
   padding: 12px;
+}
+
+.input:active, .input:focus {
+  color: var(--text-heading-color);
+}
+
+.input:focus-visible {
+  color: var(--text-heading-color);
+}
+
+.input[data-wf-focus-visible] {
+  color: var(--text-heading-color);
 }
 
 .input::-ms-input-placeholder {
@@ -184,9 +196,22 @@
   min-height: 154px;
   border: 1px solid var(--input-border-color);
   background-color: var(--input-background-color);
+  color: var(--text-heading-color);
   border-radius: 8px;
   margin-bottom: 0;
   padding: 12px 14px;
+}
+
+.textarea:active, .textarea:focus {
+  color: var(--text-heading-color);
+}
+
+.textarea:focus-visible {
+  color: var(--text-heading-color);
+}
+
+.textarea[data-wf-focus-visible] {
+  color: var(--text-heading-color);
 }
 
 .textarea::-ms-input-placeholder {
@@ -230,6 +255,7 @@
   background-color: rgba(240, 240, 240, 0);
   margin-right: auto;
   padding: 8px 0;
+  font-weight: 500;
   display: flex;
 }
 
@@ -275,9 +301,12 @@
   display: block;
 }
 
+.profile-block {
+  display: flex;
+}
+
 @media screen and (max-width: 991px) {
   .modal-wrapper {
-    max-width: 96%;
     margin-left: 16px;
     margin-right: 16px;
   }
@@ -308,10 +337,6 @@
 }
 
 @media screen and (max-width: 767px) {
-  .modal-wrapper {
-    max-width: 92%;
-  }
-
   .modal-tabs_menu {
     overflow: auto;
   }
@@ -325,16 +350,24 @@
     margin-top: 20px;
   }
 
-  ._2-col-input {
+  ._2-col-input, .button-wrapper {
     flex-direction: column;
   }
-
-  .button-wrapper {
-    justify-content: space-between;
-  }
+  .iti-mobile .iti--container {
+    max-width: 86%!important;
+}
 }
 
 @media screen and (max-width: 479px) {
+  .profile-content_flex {
+    flex-direction: column;
+    display: block;
+  }
+
+  .thumbnail {
+    margin-bottom: 16px;
+  }
+
   .button-wrapper {
     flex-direction: column;
   }
@@ -406,15 +439,22 @@
 }
 @font-face {
   font-family: 'Sfprodisplay';
-  src: url('../fonts/SFProDisplay-Black.woff2') format('woff2'), url('../fonts/SFProDisplay-Heavy.woff2') format('woff2');
+  src: url('../fonts/SFProDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sfprodisplay';
+  src: url('../fonts/SFProDisplay-Heavy.woff2') format('woff2');
   font-weight: 900;
   font-style: normal;
   font-display: swap;
 }
 @font-face {
   font-family: 'Sfprodisplay';
-  src: url('../fonts/SFProDisplay-Regular.woff2') format('woff2');
-  font-weight: 400;
+  src: url('../fonts/SFProDisplay-Medium.woff2') format('woff2');
+  font-weight: 500;
   font-style: normal;
   font-display: swap;
 }

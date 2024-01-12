@@ -1146,10 +1146,6 @@ textarea.w-select {
   .w-nav-brand {
     padding-left: 10px;
   }
-  .iti-mobile .iti__country-list {
-    max-height: 86%!important;
-    width: 86%!important;
-  }
 }
 /**
  * ## Note
