@@ -1,0 +1,420 @@
+:root {
+  --background-color: #fdf7f7;
+  --modal-background-color: #03060d;
+  --text-heading-color: #fffafb;
+  --border-color: #403f3f;
+  --tab-color-default: #d1cccc;
+  --input-border-color: rgba(255, 250, 251, .1);
+  --input-background-color: #0f1118;
+}
+
+.body {
+  background-color: var(--background-color);
+  font-family: Sfprodisplay, sans-serif;
+}
+
+.modal-wrapper {
+  width: 100%;
+  max-width: 53.75rem;
+  margin-left: auto;
+  margin-right: auto;
+  padding-top: 6rem;
+  padding-bottom: 6rem;
+  display: flex;
+}
+
+.modal {
+  width: 100%;
+  background-color: var(--modal-background-color);
+  border-radius: 48px;
+  padding: 48px;
+  overflow: hidden;
+}
+
+.modal-header {
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2.25rem;
+  display: flex;
+}
+
+.heading-style-1 {
+  color: var(--text-heading-color);
+  margin-top: 0;
+  margin-bottom: 0;
+  font-size: 3rem;
+  font-weight: 600;
+  line-height: 150%;
+  display: inline-block;
+}
+
+.modal-tabs_menu {
+  grid-column-gap: 24px;
+  border-bottom: 1px solid var(--border-color);
+  align-items: center;
+  display: flex;
+}
+
+.modal-tab_link {
+  background-color: var(--modal-background-color);
+  color: var(--tab-color-default);
+  padding: 16px 12px;
+  font-size: 1.25rem;
+  font-weight: 400;
+  line-height: 150%;
+}
+
+.modal-tab_link.w--current {
+  background-color: var(--modal-background-color);
+  color: var(--background-color);
+  border-bottom: 1.5px solid #f74749;
+  font-weight: 500;
+}
+
+.close-modal {
+  color: var(--background-color);
+  font-family: "Fa 300", sans-serif;
+  font-size: 36px;
+  line-height: 150%;
+}
+
+.profile-wrapper {
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 48px;
+  margin-bottom: 48px;
+  display: flex;
+}
+
+.profile-content_flex {
+  justify-content: space-between;
+  align-items: center;
+  display: flex;
+}
+
+.thumbnail {
+  max-width: 90px;
+  margin-right: 24px;
+}
+
+.upload-btn-wrapper {
+  max-width: 156px;
+  display: inline-block;
+  position: relative;
+  overflow: hidden;
+}
+
+.upload-btn {
+  color: #fffafb;
+  background-color: rgba(240, 240, 240, 0);
+  border: 1px solid #a6a3a3;
+  border-radius: 8px;
+  padding: 8px 16px;
+  position: absolute;
+  top: 0%;
+  bottom: auto;
+  left: 0%;
+  right: auto;
+}
+
+.file-upload {
+  z-index: 2;
+  opacity: 0;
+  cursor: pointer;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  position: relative;
+}
+
+.max-text {
+  color: #a6a3a3;
+}
+
+._2-col-input {
+  grid-column-gap: 24px;
+  grid-row-gap: 24px;
+  justify-content: space-between;
+  margin-bottom: 24px;
+  display: flex;
+}
+
+.input-wrapper {
+  width: 100%;
+}
+
+.label {
+  color: var(--text-heading-color);
+  margin-bottom: 4px;
+  font-weight: 400;
+}
+
+.input {
+  border: 1px solid var(--input-border-color);
+  background-color: var(--input-background-color);
+  border-radius: 8px;
+  margin-bottom: 0;
+  padding: 12px;
+}
+
+.input::-ms-input-placeholder {
+  color: var(--text-heading-color);
+}
+
+.input::placeholder {
+  color: var(--text-heading-color);
+}
+
+.input.phone:active, .input.phone:focus {
+  color: var(--text-heading-color);
+}
+
+.input.phone:focus-visible {
+  color: var(--text-heading-color);
+}
+
+.input.phone[data-wf-focus-visible] {
+  color: var(--text-heading-color);
+}
+
+.full-col-input {
+  margin-bottom: 64px;
+}
+
+.textarea {
+  min-height: 154px;
+  border: 1px solid var(--input-border-color);
+  background-color: var(--input-background-color);
+  border-radius: 8px;
+  margin-bottom: 0;
+  padding: 12px 14px;
+}
+
+.textarea::-ms-input-placeholder {
+  color: #fffafb;
+  font-weight: 400;
+}
+
+.textarea::placeholder {
+  color: #fffafb;
+  font-weight: 400;
+}
+
+.button-wrapper {
+  grid-column-gap: 20px;
+  grid-row-gap: 20px;
+  justify-content: flex-end;
+  display: flex;
+}
+
+.button-secondary {
+  border: 1px solid var(--input-border-color);
+  background-color: var(--input-background-color);
+  color: var(--text-heading-color);
+  border-radius: 8px;
+  padding: 20px 32px;
+  font-size: 18px;
+}
+
+.button-primary {
+  background-image: linear-gradient(96deg, #fb643f, #f0005f);
+  border-radius: 8px;
+  padding: 20px 32px;
+  font-size: 18px;
+}
+
+.remove-file {
+  width: 100%;
+  max-width: 73px;
+  grid-column-gap: 8px;
+  color: var(--text-heading-color);
+  background-color: rgba(240, 240, 240, 0);
+  margin-right: auto;
+  padding: 8px 0;
+  display: flex;
+}
+
+.trash-ico {
+  font-family: "Fa 300", sans-serif;
+}
+
+.field-label {
+  color: #6b7280;
+  margin-bottom: 8px;
+  font-size: 12px;
+  font-weight: 500;
+  line-height: 18px;
+}
+
+.text-field {
+  height: 48px;
+  color: #9ca3af;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  margin-bottom: 8px;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+.text-field:hover {
+  border-color: #3b82f6;
+}
+
+.text-field:focus {
+  border-color: #2563eb;
+}
+
+.text-field::-ms-input-placeholder {
+  color: #d1d5db;
+}
+
+.text-field::placeholder {
+  color: #d1d5db;
+}
+
+.html-embed {
+  display: block;
+}
+
+@media screen and (max-width: 991px) {
+  .modal-wrapper {
+    max-width: 96%;
+    margin-left: 16px;
+    margin-right: 16px;
+  }
+
+  .modal {
+    padding: 24px;
+  }
+
+  .input:active, .input:focus {
+    color: var(--text-heading-color);
+  }
+
+  .input:focus-visible {
+    color: var(--text-heading-color);
+  }
+
+  .input[data-wf-focus-visible], .textarea:active, .textarea:focus {
+    color: var(--text-heading-color);
+  }
+
+  .textarea::-ms-input-placeholder {
+    color: var(--text-heading-color);
+  }
+
+  .textarea::placeholder {
+    color: var(--text-heading-color);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .modal-wrapper {
+    max-width: 92%;
+  }
+
+  .modal-tabs_menu {
+    overflow: auto;
+  }
+
+  .profile-wrapper {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .profile-max-caption {
+    margin-top: 20px;
+  }
+
+  ._2-col-input {
+    flex-direction: column;
+  }
+
+  .button-wrapper {
+    justify-content: space-between;
+  }
+}
+
+@media screen and (max-width: 479px) {
+  .button-wrapper {
+    flex-direction: column;
+  }
+}
+
+
+@font-face {
+  font-family: 'Fa 100';
+  src: url('../fonts/fa-thin-100.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fa 400';
+  src: url('../fonts/fa-regular-400.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fa 300';
+  src: url('../fonts/fa-light-300.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Fa Solid 900';
+  src: url('../fonts/fa-solid-900.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sfprodisplay';
+  src: url('../fonts/SFProDisplay-Semibold.woff2') format('woff2');
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sfprodisplay';
+  src: url('../fonts/SFProDisplay-Bold.woff2') format('woff2');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sfprodisplay';
+  src: url('../fonts/SFProDisplay-Thin.woff2') format('woff2');
+  font-weight: 100;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sfprodisplay';
+  src: url('../fonts/SFProDisplay-Ultralight.woff2') format('woff2');
+  font-weight: 200;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sfprodisplay';
+  src: url('../fonts/SFProDisplay-Light.woff2') format('woff2');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sfprodisplay';
+  src: url('../fonts/SFProDisplay-Black.woff2') format('woff2'), url('../fonts/SFProDisplay-Heavy.woff2') format('woff2');
+  font-weight: 900;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: 'Sfprodisplay';
+  src: url('../fonts/SFProDisplay-Regular.woff2') format('woff2');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
